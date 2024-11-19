@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>تواصل معي</h1>
+        <nav>
+            <a href="index.html"><button class="nav-button">الرئيسية</button></a>
+            <a href="about.html"><button class="nav-button">من أنا</button></a>
+            <a href="projects.html"><button class="nav-button">مشاريعي</button></a>
+            <a href="contact.html"><button class="nav-button">تواصل معي</button></a>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h2>نموذج الاتصال</h2>
+        <form id="contact-form" onsubmit="redirectToThankYouPage(event)">
+            <div class="form-group">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">الرسالة:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="nav-button">إرسال</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>تم بناء هذا الموقع بواسطة معاذ.</p>
+    </footer>
+
+    <script>
+        function redirectToThankYouPage(event) {
+            event.preventDefault(); // منع إرسال النموذج بشكل تقليدي
+            // إعادة التوجيه إلى صفحة الشكر
+            window.location.href = "thank-you.html"; 
+        }
+    </script>
+
+</body>
+</html>
